@@ -9,14 +9,14 @@ router.get('/channels', function(req, res, next) {
 });
 
 router.get('/channels/:name/stats', function(req, res, next) {
-  stats.getChannelStats(req.params.name, req.query.style)
+  stats.getChannelStats(req.params.name, req.query.type)
     .then(function(data) {
       res.json(data);
     });
 });
 
 router.get('/channels/stats', function(req, res, next) {
-  stats.getAllChannelStats(req.query.style).then(function(data) {
+  stats.getAllChannelStats(req.query.type).then(function(data) {
     res.json(data);
   });
 
