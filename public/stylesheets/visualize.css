@@ -1,20 +1,38 @@
 #chart_container {
-        position: relative;
-        display: inline-block;
-        font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
 }
 #chart {
-        display: inline-block;
-        margin-left: 40px;
+  display: inline-block;
+  margin-left: 40px;
 }
 #y_axis {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
 }
 #legend {
-        display: inline-block;
-        vertical-align: top;
-        margin: 0 0 0 10px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 10px;
+}
+#controller a {
+  margin-right: 8px;
+}
+#controller a.selected {
+  color: #007CAD;
+}
+#controller a:hover {
+  cursor: pointer;
+}
+#x_axis {
+  width: 1300px;
+}
+#x_axis > svg {
+  position: relative;
+  left: -40px !important;
+  width: inherit;
+  top: -46px;
 }
