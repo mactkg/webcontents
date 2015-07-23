@@ -8,7 +8,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
                   return channels.map(function(c) {
                     var data = {name: c[0].value.channel};
                     data.data = c.map(function(d) {
-                      return {x: Date.parse(d._id)/1000, y:d.value.count};
+                      if(type == "weekly") {
+                        return {x: d._id, y:d.value.count};
+                      } else {
+                        return {x: Date.parse(d._id)/1000+32400, y:d.value.count};
+                      }
                     });
                     data.color = palette.color();
                     data.count = c.map(function(c) {
