@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "mongo:import": "node ./bin/import"
+    "mongo:import": "node ./bin/import",
+    "mongo:ensureIndex": "node ./bin/ensure_index.js"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
